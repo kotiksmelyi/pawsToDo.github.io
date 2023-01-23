@@ -1,0 +1,63 @@
+.container {
+    background: red;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.borders {
+    background-color: #EAD6DB;
+    height: 40px;
+    border: solid black 1px;
+}
+
+.textContainer {
+    background-color: #B9C5B5;
+    border-left: solid black 1px;
+    border-right: solid black 1px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    height: 50px;
+    margin-left: 5vw;
+}
+
+.addList {
+    margin-right: 5vw;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.addList:hover {
+    background-color: black;
+    box-shadow: 0 0 10px 5px black;
+    border-radius: 3vw;
+    transition: 0.5s;
+}
+
+@media (max-width: 900px) {
+    .text {
+        height: 30px;
+        margin-left: 2vw;
+    }
+    .addList {
+        height: 40px;
+        margin-right: 2vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .text {
+        height: 20px;
+        margin-left: 1vw;
+    }
+    .addList {
+        height: 30px;
+        margin-right: 1vw;
+    }
+}

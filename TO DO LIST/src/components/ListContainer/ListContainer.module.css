@@ -1,0 +1,100 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.listHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid black 2px;
+    margin-bottom: 2vh;
+    gap: 1vw;
+    padding: 1vh;
+}
+
+.headerInput {
+    border: none;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 24px
+}
+
+.headerInput:focus-visible {
+    outline: none;
+    border-bottom: black solid 2px;
+}
+
+.icon {
+    height: 35px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.icon:hover {
+    height: 50px;
+    transition: 0.5s;
+}
+
+.listBody {
+    background: #EAD6DB;
+    border: solid black 1px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    padding: 5%;
+}
+
+.addTaskContainer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #EAD6DB;
+    align-items: center;
+}
+
+.addTaskInput {
+    background: #f4f0f0;
+    border: solid black 1px;
+    padding: 0.5% 2%;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 24px;
+    flex-grow: 1;
+    transition: 0.5s;
+}
+
+.addTaskInput:focus-visible, .addTaskInput:hover {
+    outline: none;
+    background-color: pink;
+    transition: 0.5s;
+}
+
+.addTaskButton {
+    display: block;
+    width: 17%;
+    background-color: #EAD6DB;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.addTaskButton:hover {
+    width: 22%;
+    transition: 0.5s;
+}
+
+.tasksContainer {
+    width: 100%;
+    max-height: 500px;
+    overflow-y: scroll;
+    margin-top: 4vh;
+    background: #EAD6DB;
+}
+
+.tasksContainer::-webkit-scrollbar {
+  width: 2px;
+}
