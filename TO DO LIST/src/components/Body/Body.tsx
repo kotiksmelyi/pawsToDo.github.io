@@ -4,6 +4,7 @@ import { ListContainer } from "../ListContainer/ListContainer"
 import styles from './Body.module.css'
 
     export const Body: FC = () => {
+    //@ts-ignore
     const toDo = useToDoStore(state => state.toDos)
 
     return (

@@ -13,6 +13,7 @@ type Props = {
 }
 
 export const Task: FC<Props> = ({header, text, parentIndex, childIndex}) => {
+    //@ts-ignore
     const [store, deleteTask, editTask] = useToDoStore(state => [state.toDos, state.deleteTask, state.setTask])
     const [head, setHead] = useState(header)
     const [taskText, setTaskText] = useState(text)

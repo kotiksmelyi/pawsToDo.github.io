@@ -16,6 +16,7 @@ type Props = {
 
 export const ListContainer: FC<Props> = ({title, parentIndex, list, id}) => {
 
+    //@ts-ignore
     const [titleStore, setTitleStore, deleteList, addNewTask] = useToDoStore(state => [state.toDos, state.setListTitle, state.deleteList, state.addTask])
 
     const [titles, setTitles] = useState(title)
@@ -35,7 +36,7 @@ export const ListContainer: FC<Props> = ({title, parentIndex, list, id}) => {
                 <img className={styles.addTaskButton} src={addTask} alt="add task" onClick={() => {addNewTask(parentIndex, task), setTask('')}}/>
             </div>
             <div className={styles.tasksContainer}>
-                {list && list?.tasks?.map((i, index: number) => (
+                {list && list?.tasks?.map((i: any, index: number) => (
                     <Task text={i.text} parentIndex={parentIndex} key={i.id} header={i.header} childIndex={index} currentList={list.tasks} />
                 )
                 )}

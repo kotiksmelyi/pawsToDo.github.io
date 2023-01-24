@@ -5,6 +5,7 @@ import addList from '/src/assets/addList.svg'
 import { useToDoStore } from "../../store/useToDoStore"
 
 export const Header: FC = () => {
+    //@ts-ignore
     const [lists, addLists] = useToDoStore(state => [state.toDos, state.addToDoList])
 
     const handleClick = () => {
